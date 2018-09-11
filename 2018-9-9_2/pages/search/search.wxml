@@ -1,0 +1,43 @@
+<!--pages/search/search.wxml-->
+<!-- <text>pages/search/search.wxml</text> -->
+<!-- 顶部的搜索栏 -->
+<view class="search-box">
+    <icon type="search" size="16"></icon>
+    <input type="text" value="{{key}}" bindconfirm="search" placeholder="搜索歌曲、歌手、专辑"></input>
+</view>
+<!-- 搜索的结果盒子 -->
+<view wx:if="{{searchList.length!=0}}" class="list-box">
+    <view class="item {{item.id?'copyright':''}}" bindtap="play" data-id="{{item.id}}" wx:for="{{searchList}}">
+        <view class="left">
+            <text class="info" decode>{{item.name}}&lt;&lt;{{item.album.name}}&gt;&gt;</text>
+            <text class="name">{{item.artists[0].name}}</text>
+        </view>
+        <view class="right">
+            <text class="iconfont icon-play"></text>
+        </view>
+    </view>
+</view>
+<!-- 历史记录盒子 -->
+<view wx:if="{{searchList.length==0}}" class="history-box">
+    <view class="item" wx:for="{{history}}">
+        <view bindtap="selectHistory" data-key="{{item}}" class="left">🕐{{item}}</view>
+        <view bindtap="deleteHistory" data-index="{{index}}" class="right">✖</view>
+    </view>
+</view>
+
+
+<!-- 底部的播放器 -->
+<view class='play-box'>
+<!-- 自己写一个播放器的样子 -->
+    <view class="left">
+        <image  src="{{cover==''?'https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=445129793,273044551&fm=85&s=3E0136668AC27F7A120A5C470300F0E9':cover}}" > </image>
+        <view>
+            <text class="song">{{songName}}</text>
+            <text class="singer">{{singer}}</text>
+        </view>
+    </view>
+    <view class="right">
+        <text bindtap='togglePlay' class="icon-{{paused==true?'play':'music-icon_pause'}} iconfont"></text>
+        <text class="iconfont icon-menu"></text>
+    </view>
+</view>

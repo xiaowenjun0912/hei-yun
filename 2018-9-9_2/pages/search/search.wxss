@@ -1,0 +1,83 @@
+/* pages/search/search.wxss */
+.search-box {
+    height: 120rpx;
+    padding: 30rpx 20rpx;
+    box-sizing: border-box;
+    border-bottom: 2rpx solid hotpink;
+}
+
+.search-box icon {
+    position: absolute;
+    left: 32rpx;
+    top: 50rpx;
+    z-index: 2;
+    font-size: 26rpx;
+}
+
+.search-box input {
+    width: 710rpx;
+    height: 60rpx;
+    box-sizing: border-box;
+    background: #EBECEC;
+    border-radius: 30rpx;
+    font-size: 26rpx;
+    padding-left: 50rpx;
+}
+
+/* 搜索出来的列表页 */
+.list-box {}
+
+.list-box .item {
+    height: 110rpx;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20rpx;
+    align-items: center;
+    border-bottom: 2rpx solid #ccc;
+    color:#ccc;
+}
+/* 有版权的时候 */
+.list-box .item.copyright{
+    color:black;
+}
+
+.list-box .item .left {}
+.list-box .item .left text{
+    display: block;
+}
+
+.list-box .item .left .info {
+    font-size:32rpx;
+}
+
+.list-box .item .left .name {
+    font-size:24rpx;
+}
+
+.list-box .item .right {}
+
+.list-box .item .right text {
+    width: 50rpx;
+    height: 50rpx;
+    display: block;
+    text-align: center;
+    line-height: 50rpx;
+    font-size:30rpx;
+    border:2rpx solid gray;
+    border-radius: 50%;
+}
+/* 历史纪录 */
+.history-box{
+    
+}
+.history-box .item{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20rpx;
+    height: 80rpx;
+    border-bottom: 2rpx solid hotpink;
+    font-size:30rpx;
+    align-items: center;
+}
+.history-box .left{}
+.history-box .right{}

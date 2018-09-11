@@ -1,0 +1,199 @@
+/* 顶部的样式 */
+.header{
+    background: #C62F2F;
+    display: flex;
+    justify-content: space-between;
+    height: 100rpx;
+    align-items: center;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+}
+.header text{
+    color:white;
+    font-size:40rpx;
+}
+.header .menu{}
+.header .mid-box{
+    display: flex;
+    align-items: center;
+}
+.header .mid-box text{}
+.header .mid-box text:nth-child(2){
+    margin: 0 50rpx;
+}
+.header .search{}
+
+/* tab栏 */
+.tab-bar{
+    height: 60rpx;
+    display: flex;
+}
+.tab-bar .item.active{
+    border-bottom: 4rpx solid #C62F2F;
+    color:#C62F2F;
+}
+.tab-bar .item{
+    flex:1;
+    font-size:24rpx;
+    line-height: 60rpx;
+    text-align: center;
+}
+/* 轮播图 */
+swiper{
+  height: 345rpx;
+}
+swiper image{
+  width: 100%;
+  height:100%;
+}
+/* 个性推荐区域 */
+.personal{}
+.personal .info{
+  height: 200rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.personal .info >view{
+ 
+}
+.personal .info >view >text{
+  display: block;
+  text-align: center;
+  font-size: 24rpx;
+  
+}
+.personal .info >view >text:nth-child(1){
+  color: #c62f2f;
+  font-size: 50rpx;
+  border: 2px solid red;
+  width: 100rpx;
+  border-radius: 50%;
+  height: 100rpx;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 100rpx;
+  margin-top: 30rpx;
+  margin-bottom: 10rpx;
+}
+page{
+  width: 750rpx;
+  height: 1280rpx;
+}
+.section{
+  width: 750rpx;
+  height: 340rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 200rpx;
+  padding-bottom: 200rpx;
+}
+.section .music-item{
+  width: 33%;
+  height: 100%;
+  position: relative;
+  margin-bottom: 10rpx;
+}
+.section .music-item view{
+  font-size:24rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  color: white;
+}
+.section image{
+  width:100%;
+  height: 80%;
+}
+.recommit{
+  font-size: 26rpx;
+  text-align: center;
+  display: block;
+  color: orange;
+}
+.gedan{
+  padding-left: 20rpx;
+  color:purple;
+  font-weight: 700
+}
+.title{
+  margin-bottom: 20rpx;
+}
+.blank{
+  width: 750rpx;
+  height: 200rpx;
+}
+/* 吸顶 */
+.header{
+  position: fixed;
+  top:0rpx;
+  left: 0rpx;
+  width: 750rpx;
+  z-index: 5;
+}
+.tab-bar{
+    position: fixed;
+  top:97rpx;
+  left: 0rpx;
+  width: 750rpx;
+  z-index: 5;
+  background-color: white;
+  
+}
+
+page{
+  height: 4330rpx;
+  padding-top: 160rpx;
+}
+
+.play-box{
+  width: 750rpx;
+  height: 200rpx;
+  position:fixed;
+  bottom: 0px;
+  left: 0;
+  z-index: 5;
+  background-color: white;
+}
+.play-box .left{
+  float: left;
+  height: 100%;
+  width: 50%;
+  margin-left: 20rpx;
+  display: flex;
+}
+.play-box .left image{
+  width: 50%;
+  height: 50%;
+  margin-top: 50rpx;
+  margin-right: 20rpx;
+}
+.play-box .left text{
+  color: purple;
+  font-size: 24rpx;
+}
+.play-box .left .song{
+  color: red;
+  font-size: 28rpx;
+  display: block;
+  margin:60rpx 0 10rpx;
+}
+.play-box .right{
+  float: right;
+  height: 100%;
+  width: 45%;
+  position: relative;
+}
+.play-box .right text:nth-child(1){
+  bottom: 60rpx;
+  position: absolute;
+  right: 200rpx;
+  font-size: 60rpx;
+}
+
+.play-box .right text:nth-child(2){
+  bottom: 60rpx;
+  font-size: 60rpx;
+  position: absolute;
+  right: 50rpx;
+}
